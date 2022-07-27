@@ -47,10 +47,9 @@ function Banner(props) {
         <div className="banner">
             <div className="banner_list">
                 {data.map((item, index) => (
-                    <Link to="/catalog">
+                    <Link key={item.id} to="/catalog">
                         <img
                             className={`banner_list_item ${index === activeBanner ? 'active' : ''}`}
-                            key={item.id}
                             src={item.img}
                             alt=""
                         />
